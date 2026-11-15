@@ -1634,6 +1634,7 @@ mbus_context_serial(const char *device)
         return NULL;
     }
 
+    handle->fd = -1;
     handle->max_data_retry = 3;
     handle->max_search_retry = 1;
     handle->is_serial = 1;
@@ -1684,6 +1685,7 @@ mbus_context_tcp(const char *host, uint16_t port)
         return NULL;
     }
 
+    handle->fd = -1;
     handle->max_data_retry = 3;
     handle->max_search_retry = 1;
     handle->is_serial = 0;
